@@ -9,6 +9,8 @@ class Discountcode:
         self.customer=customer
         self.product=product
         self.limit=limit
+    def __str__(self):
+        return f"time:{self.time},customer:{self.customer},product:{self.product},limit:{self.limit}"
 class Shoppingbasket:
     item:"Item"=None
     seller:"Seller"=None
@@ -19,6 +21,8 @@ class Shoppingbasket:
         self.seller=seller
         self.time=time
         self.discount_code=discount_codes
+    def __str__(self):
+        return f"item:{self.item},seller:{self.seller},time:{self.time},discount_code:{self.discount_code}"
 class Transaction:
     time:datetime.datetime
     tracking_number:int=0
@@ -27,6 +31,8 @@ class Transaction:
         self.time=time
         self.tracking_number=tracking_number
         self.amount=amount
+    def __str__(self):
+        return f"time:{self.time},customer:{self.tracking_number},amount:{self.amount}"
 class Wallet:
     code:int=0
     transactions:list[Transaction]
