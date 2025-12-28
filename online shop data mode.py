@@ -32,13 +32,15 @@ class Transaction:
         self.tracking_number=tracking_number
         self.amount=amount
     def __str__(self):
-        return f"time:{self.time},customer:{self.tracking_number},amount:{self.amount}"
+        return f"time:{self.time},tracking_number:{self.tracking_number},amount:{self.amount}"
 class Wallet:
     code:int=0
     transactions:list[Transaction]
     def __init__(self,code,transactions):
         self.code=code
         self.transactions=transactions
+    def __str__(self):
+        return f"code:{self.code},transactions:{self.transactions}"
 class Customer:
     name:str=""
     family:str=""
@@ -51,6 +53,8 @@ class Customer:
         self.id=id
         self.shopping_basket=shopping_basket
         self.wallet=wallet
+    def __str__(self):
+        return f"name:{self.name},family:{self.family},id:{self.id},shopping_basket:{self.shopping_basket},wallet:{self.wallet}"
 class Comment:
     context:str=""
     time:datetime.datetime
@@ -59,6 +63,8 @@ class Comment:
         self.context=context
         self.time=time
         self.user=user
+    def __str__(self):
+        return f"time:{self.time},context:{self.context},user:{self.user}"
 class Product:
     id:str=""
     comments:list[Comment]
