@@ -4,41 +4,81 @@ class Discountcode:
     customers:list["Customer"]
     product:"Product"=None 
     limit:int=0
+    def __init__(self,time,customer,product,limit):
+        self.time=time
+        self.customer=customer
+        self.product=product
+        self.limit=limit
 class Shoppingbasket:
     item:"Item"=None
     seller:"Seller"=None
     time:datetime.datetime
     discount_codes:list[Discountcode]
+    def __init__(self,item,seller,time,discount_codes):
+        self.item=item
+        self.seller=seller
+        self.time=time
+        self.discount_code=discount_codes
 class Transaction:
     time:datetime.datetime
     tracking_number:int=0
     amount:int=0
+    def __init__(self,time,tracking_number,amount):
+        self.time=time
+        self.tracking_number=tracking_number
+        self.amount=amount
 class Wallet:
     code:int=0
     transactions:list[Transaction]
+    def __init__(self,code,transactions):
+        self.code=code
+        self.transactions=transactions
 class Customer:
     name:str=""
     family:str=""
     id:str=""
     shopping_basket:list[Shoppingbasket]
     wallet:Wallet=None
+    def __init__(self,name,family,id,shopping_basket,wallet):
+        self.name=name
+        self.family=family
+        self.id=id
+        self.shopping_basket=shopping_basket
+        self.wallet=wallet
 class Comment:
     context:str=""
     time:datetime.datetime
     user:Customer
+    def __init__(self,context,time,user):
+        self.context=context
+        self.time=time
+        self.user=user
 class Product:
     id:str=""
     comments:list[Comment]
+    def __init__(self,id,comments):
+        self.id=id
+        self.comments=comments
 class Item:
     number:int=0
     type:Product
     price:int=0
+    def __init__(self,number,type,price):
+        self.number=number
+        self.type=type
+        self.price=price
 class Orderlist:
     id:str=""
     sellers:"Seller"=None
     item:Item=None
     order_time=datetime.datetime
     discount_code:Discountcode=None
+    def __init__(self,id,sellers,item,order_time,discount_code):
+        self.id=id
+        self.sellers=sellers
+        self.item=item
+        self.order_time=order_time
+        self.discount_code=discount_code
 class Seller:
     products:list[Item]
     place:str=""
@@ -47,8 +87,21 @@ class Seller:
     wallet:int=0
     satistics:int=0
     user_number:str=""
+    def __init__(self,products,place,score,order_list,wallet,satistics,user_number):
+        self.products=products
+        self.place=place
+        self.score=score
+        self.order_list=order_list
+        self.wallet=wallet
+        self.satistics=satistics
+        self.user_number=user_number
 class Shop:
     sellers:list[Seller]
     products:list[Product]
     customers:list[Customer]
     discount_codes:list[Discountcode]
+    def __init__(self,sellers,products,customers,discount_codes):
+        self.sellers=sellers
+        self.products=products
+        self.customers=customers
+        self.discount_codes=discount_codes

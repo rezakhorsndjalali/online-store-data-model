@@ -47,3 +47,130 @@ The Time field stores the creation time or expiration date of the discount code.
 2. The sellers field is a list of all active sellers in the system.
 3. The products field contains all the products available in the store.
 4. The customers field stores the list of registered customers. The discount_codes field contains all the discount codes active in the store.
+
+These menus that you see below are going to be written and executed in the continuation of this code, which I will write the descriptions of the menus below.
+ ## root menu
+ 1. login
+ 2. register
+ 3. exit
+## login menu
+1. operator
+2. seller
+3. customer
+4. back
+
+# Console Menu Structure
+
+This project is implemented as a console-based application with a hierarchical menu system.
+Users interact with the system through different roles: Operator, Seller, and Customer.
+#### Below is the full menu flow and available options.
+
+## Root Menu
+When the application starts, the following main menu is shown:
+1. Login:
+Allows a user to log in as Operator, Seller, or Customer.
+
+2. Register:
+Allows new users to register in the system.
+
+3. Exit:
+Exits the application.
+
+## Role Selection Menu
+After login, the user selects a role:
+1. Operator
+
+2. Seller
+
+3. Customer
+
+4. Back
+## Operator Menu
+The operator has full system management access.
+#### Available options:
+1. View Sellers:
+Displays the list of all registered sellers.
+
+2. Confirm Seller:
+Approves or verifies seller accounts.
+
+3. View Customers:
+Displays all registered customers.
+
+4. Confirm Customer:
+Confirms customer accounts.
+
+5. View Orders:
+Shows all orders in the system.
+
+6. Create Discount Code:
+Creates new discount codes.
+
+7. View System Statistics:
+Displays system-level statistics such as total orders, users, and sales.
+
+8. Back:
+Returns to the previous menu.
+## Seller Menu
+
+Sellers manage their products and orders.
+
+#### Available options:
+
+1. View My Items:
+Displays items listed by the seller.
+
+2. Add Item:
+Adds a new product item to the seller’s inventory.
+
+3. View Orders:
+Displays orders related to the seller.
+
+4. Back:
+Returns to the previous menu.
+## Customer Menu
+
+Customers interact with products, baskets, and payments.
+
+#### Available options:
+
+1. View Products:
+Shows all available products.
+
+#### Inside this section:
+
+Add product to basket
+
+Write comment
+
+View sellers
+
+View product properties
+
+Back
+
+1. View Baskets
+Allows navigation between shopping baskets:
+
+Current basket
+
+Previous basket
+
+Next basket
+
+3. Wallet
+    Wallet management options:
+
+        Increase inventory (add balance)
+
+        Withdrawal
+
+        View inventory (balance)
+
+        Back
+
+4. Checkout
+    Finalizes the purchase and creates an order.
+
+5. Back
+    Returns to the previous menu.
