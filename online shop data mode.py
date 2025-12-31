@@ -196,3 +196,17 @@ while True:
             pass
         elif cmd==0:
             level=="login"
+    elif level=="customer":
+        print("1.view products")
+        print("2.view baskets")
+        print("3.wallet")
+        print("0.back")
+        cmd=int(input(">>"))
+        if cmd==1:
+            pass
+        elif cmd==2:
+            pass
+        elif cmd==3:
+            pass
+        elif cmd==0:
+            level=="login"
