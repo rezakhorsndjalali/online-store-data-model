@@ -130,17 +130,17 @@ class Shop:
 level="root"
 while True:
     if level=="root":
-        print("1.Log in")
+        print("1.login")
         print("2.register")
         print("0.exit")
         cmd=int(input(">>"))
         if cmd==1:
-            level=="Log in"
+            level=="login"
         elif cmd==2:
             level=="register"
         elif cmd==0:
             break
-    elif level=="Log in":
+    elif level=="login":
         print("1.operator")
         print("2.seller")
         print("3.customer")
@@ -154,4 +154,37 @@ while True:
             pass
         elif cmd==0:
             level=="root"
-    
+    elif level=="operator":
+        print("1.view sellers")
+        print("2.confirm seller")
+        print("3.view customer")
+        print("4.confirm customer")
+        print("5.view orders")
+        print("6.creat discount_code")
+        print("7.view system satistics")
+        print("0.back")
+        cmd=int(input(">>"))
+        if cmd==1:
+            pass
+        if cmd==2:
+            pass
+        if cmd==3:
+            pass
+        if cmd==4:
+            pass
+        if cmd==5:
+            pass
+        if cmd==6:
+            pass
+        if cmd==7:
+            pass
+        if cmd==8:
+            pass
+        if cmd==0:
+            level=="login"
+    elif level=="seller":
+        print("1.view my items")
+        print("2.add item")
+        print("3.view orders")
+        print("0.back")
+        cmd=int(inp)
