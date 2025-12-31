@@ -140,4 +140,18 @@ while True:
             level=="register"
         elif cmd==0:
             break
-        
+    elif level=="Log in":
+        print("1.operator")
+        print("2.seller")
+        print("3.customer")
+        print("0.back")
+        cmd=int(input(">>"))
+        if cmd==1:
+            pass
+        elif cmd==2:
+            pass
+        elif cmd==3:
+            pass
+        elif cmd==0:
+            level=="root"
+    
