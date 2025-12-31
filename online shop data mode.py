@@ -127,4 +127,17 @@ class Shop:
         self.discount_codes=discount_codes
     def __str__(self):
         return f"sellers:{self.sellers},products:{self.products},customers:{self.customers},discount_codes:{self.discount_codes}"
-    
+level="root"
+while True:
+    if level=="root":
+        print("1.Log in")
+        print("2.register")
+        print("0.exit")
+        cmd=int(input(">>"))
+        if cmd==1:
+            level=="Log in"
+        elif cmd==2:
+            level=="register"
+        elif cmd==0:
+            break
+        
