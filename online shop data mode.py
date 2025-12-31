@@ -125,3 +125,6 @@ class Shop:
         self.products=products
         self.customers=customers
         self.discount_codes=discount_codes
+    def __str__(self):
+        return f"sellers:{self.sellers},products:{self.products},customers:{self.customers},discount_codes:{self.discount_codes}"
+    
