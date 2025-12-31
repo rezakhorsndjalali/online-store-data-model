@@ -166,25 +166,33 @@ while True:
         cmd=int(input(">>"))
         if cmd==1:
             pass
-        if cmd==2:
+        elif cmd==2:
             pass
-        if cmd==3:
+        elif cmd==3:
             pass
-        if cmd==4:
+        elif cmd==4:
             pass
-        if cmd==5:
+        elif cmd==5:
             pass
-        if cmd==6:
+        elif cmd==6:
             pass
-        if cmd==7:
+        elif cmd==7:
             pass
-        if cmd==8:
+        elif cmd==8:
             pass
-        if cmd==0:
+        elif cmd==0:
             level=="login"
     elif level=="seller":
         print("1.view my items")
         print("2.add item")
         print("3.view orders")
         print("0.back")
-        cmd=int(inp)
+        cmd=int(input(">>"))
+        if cmd==1:
+            pass
+        elif cmd==2:
+            pass
+        elif cmd==3:
+            pass
+        elif cmd==0:
+            level=="login"
