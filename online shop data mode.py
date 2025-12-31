@@ -95,6 +95,8 @@ class Orderlist:
         self.item=item
         self.order_time=order_time
         self.discount_code=discount_code
+    def __str__(self):
+        return f"id:{self.id},sellers:{self.sellers},item:{self.item},order_time:{self.order_time},discount_code:{self.discount_code}"
 class Seller:
     products:list[Item]
     place:str=""
@@ -111,6 +113,8 @@ class Seller:
         self.wallet=wallet
         self.satistics=satistics
         self.user_number=user_number
+    def __str__(self):
+        return f"products:{self.products},place:{self.place},score:{self.score},order_list:{self.order_list},wallet:{self.wallet},satistics:{self.satistics},user_number:{self.user_number}"
 class Shop:
     sellers:list[Seller]
     products:list[Product]
