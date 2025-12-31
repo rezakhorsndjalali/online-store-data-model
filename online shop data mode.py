@@ -64,13 +64,15 @@ class Comment:
         self.time=time
         self.user=user
     def __str__(self):
-        return f"time:{self.time},context:{self.context},user:{self.user}"
+        return f"time:{self.time},user:{self.user},context:{self.context}"
 class Product:
     id:str=""
     comments:list[Comment]
     def __init__(self,id,comments):
         self.id=id
         self.comments=comments
+    def __str__(self):
+        return f"id:{self.id},comments:{self.comments}"
 class Item:
     number:int=0
     type:Product
@@ -79,6 +81,8 @@ class Item:
         self.number=number
         self.type=type
         self.price=price
+    def __str__(self):
+        return f"number:{self.number},type:{self.type},price:{self.price}"
 class Orderlist:
     id:str=""
     sellers:"Seller"=None
